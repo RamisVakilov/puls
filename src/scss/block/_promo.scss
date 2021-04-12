@@ -1,0 +1,89 @@
+section.promo{
+    background: url(../img/bg1.jpg) center (center/cover) no-repeat;
+    min-height: 643px;
+    padding-top: 15px;
+    padding-bottom: 93px;
+    .container{
+        
+            display: grid;
+            grid-template-areas: "header header"
+                                ". wrapper";
+            grid-template-columns: 0.3fr 1.3fr;                     
+            grid-template-rows: 60px 1fr;
+        @import '../block/header';
+        .promo__wrapper{
+            margin-top: 126px;
+                grid-area: wrapper;
+                justify-items: end;
+                display: grid;
+            .promo__header{
+                color: #ffffff;
+                font-size: 42px;
+                font-weight: 700;
+                text-align: right;
+                text-transform: uppercase;
+                span{
+                    font-size: 24px;
+                    font-weight: 500;
+                }
+            }
+            .promo__icons{
+                display: flex;
+                justify-content: space-around;
+                margin-top: 66px;
+                margin-bottom: 68px;
+                width: 60%;
+                .promo__icon{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    p{
+                        margin-top: 20px;
+                        color: #ffffff;
+                        font-size: 14px;
+                        font-weight: 500;
+                        text-align: center;    
+                    }
+                }
+            }
+            @media(max-width:575px){
+                
+                    .promo__header{
+                        font-size: 36px;
+                        text-align: center;
+                        justify-self: center;
+                        span{
+                            font-size: 24px;
+                        }
+                    }
+                        
+                    .promo__icons{
+                        width: 100%;
+                     }
+            }
+            .promo__link{
+                color: #ffffff;
+                font-size: 16px;
+                font-weight: 500;
+                margin-top: 18px;
+                span{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    
+}
+@media(max-width: 575px){
+ section.promo{
+    padding-bottom: 30px;
+ }   
+.promo .container {
+            grid-template-areas: "header"
+                                 "wrapper";
+             grid-template-columns: 1fr;
+            .promo__wrapper{
+                margin-top: 147px;
+            }
+        }
+}

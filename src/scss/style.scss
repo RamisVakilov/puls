@@ -1,0 +1,38 @@
+@font-face {
+    font-family:"museo";
+    src: url('../fonts/museosanscyrl500.woff2') format('woff2'), url("../fonts/museosanscyrl500.woff") format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+ *{
+     font-family: "museo";
+ }
+@import 'base/mixins';
+@import 'base/variables';
+@import 'block/button';
+@import 'block/slider';
+section{
+    box-sizing: border-box;
+    .container{
+        max-width: 943px;
+        margin: 0 auto;
+    }
+}
+@import 'block/promo';
+@import 'block/advantages';
+@import 'block/form';
+@import 'block/catalog';
+@import 'block/achievements';
+@import 'block/footer';
+@import 'block/modals';
+
+@media(max-width:950px){
+    .container{
+        padding-left: 10px;
+        padding-right: 10px; 
+    }
+    section.promo, .advantages, .form, .myslider, .catalog, .reviews{
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+}

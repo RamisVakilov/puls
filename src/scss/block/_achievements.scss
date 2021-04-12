@@ -1,0 +1,54 @@
+.reviews{
+    padding: 103px 0 71px 0;
+    &__title{
+        font-size: 30px;
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &__content{
+        margin-top: 70px;
+        hr{
+            background-color: #f6f6f6;
+            border-top:none;
+            margin: 48px 0;
+        }
+        &-item{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            }
+    }
+            &-item__img{
+                margin-right: 62px;
+                height: 100%;
+            }
+            @media (max-width:853px){
+                &-item__img{
+                    margin-right: 0;
+                }
+            }
+            &-item{
+                &__name{
+                    color: #0d0d0d;
+                    font-size: 18px;
+                    font-weight: 700;
+                    text-align: left;
+                }
+                &__achievements{
+                    margin-top: 10px;
+                    color: #646464;
+                    font-size: 14px;
+                    font-weight: 300;
+                    text-align: left;
+                }
+                &__text{
+                    margin-top: 19px;
+                    color: #0d0d0d;
+                    font-size: 16px;
+                    font-weight: 300;
+                    text-align: left;
+                }
+            }
+            
+}
