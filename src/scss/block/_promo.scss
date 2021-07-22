@@ -4,23 +4,21 @@ section.promo{
     padding-top: 15px;
     padding-bottom: 93px;
     .container{
-        
-            display: grid;
-            grid-template-areas: "header header"
-                                ". wrapper";
-            grid-template-columns: 0.3fr 1.3fr;                     
-            grid-template-rows: 60px 1fr;
+          
+
         @import '../block/header';
         .promo__wrapper{
-            margin-top: 126px;
-                grid-area: wrapper;
-                justify-items: end;
-                display: grid;
+                display: flex;
+                flex-direction: column;
+                place-items: flex-end;//новое свойство
+                margin-top: 50px;
+                
             .promo__header{
                 color: #ffffff;
                 font-size: 42px;
                 font-weight: 700;
-                text-align: right;
+                -webkit-text-align: right;
+                -ms-text-align: left;
                 text-transform: uppercase;
                 span{
                     font-size: 24px;
@@ -28,11 +26,11 @@ section.promo{
                 }
             }
             .promo__icons{
+                width: 50%;
                 display: flex;
-                justify-content: space-around;
+                justify-content: space-between;
                 margin-top: 66px;
                 margin-bottom: 68px;
-                width: 60%;
                 .promo__icon{
                     display: flex;
                     flex-direction: column;
@@ -79,11 +77,26 @@ section.promo{
     padding-bottom: 30px;
  }   
 .promo .container {
-            grid-template-areas: "header"
-                                 "wrapper";
-             grid-template-columns: 1fr;
+            
             .promo__wrapper{
                 margin-top: 147px;
             }
         }
 }
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {//Только для IE
+    section.promo .promo__wrapper{
+        padding-left: 424px;
+        .promo__icons{
+            padding-left: 39px;
+            .promo__icon{
+                margin: 0 38px;
+            }
+        }
+        button {
+            margin-left: 211px;
+        }
+        a.promo__link{
+            margin-left: 313px;
+        }
+    }
+ }

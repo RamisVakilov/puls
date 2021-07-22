@@ -1,7 +1,21 @@
+//import 'core-js/features/promise'; //чтобы IE понимал promise
+import $ from "jquery";
+import slick from "./slick.min";
+import my_script from "./script";
 
-function my_slider(){
-$(document).ready(function(){
-			$('.slider').slick({
+   if (window.NodeList && !NodeList.prototype.forEach) {
+        NodeList.prototype.forEach = function (callback, thisArg) {
+            thisArg = thisArg || window;
+            for (var i = 0; i < this.length; i++) {
+                callback.call(thisArg, this[i], i, this);
+            }
+        };
+    }
+window.addEventListener('DOMContentLoaded', function(){
+    "use strict";
+      slick();
+      my_script();
+      $('.slider').slick({
 				centerPadding: '0px',
 				arrows:true, //стрелки
 				dots:false,	//точки
@@ -32,7 +46,5 @@ $(document).ready(function(){
 				
 				],
 			});
-		
-		});
-	}
-module.exports = my_slider;	
+      
+})

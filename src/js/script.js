@@ -1,24 +1,32 @@
-window.onload = function () {
+function my_script(){
 //Табы
 let tabs = document.querySelectorAll('.catalog__tab-item');
 let catalog = document.querySelectorAll('.catalog__content');
-let arr = Array.from(tabs);//преобразую Dom список в массив
+
 
 let link_det = document.querySelectorAll('.catalog-item__content .catalog-item__link');
 let link_back = document.querySelectorAll('.catalog-item__list .catalog-item__link');
 
 
-[].forEach.call(tabs, function(el){ //перебираю все табы
-    el.onclick = function(e){ //где el-это отдельно взятый элемент группы tabs
-        let tab_ac = document.querySelector('.catalog__tab-item_active');//ищу активные tab
-        let cont_ac = document.querySelector('.catalog__content_active');//ищу активные окна
-            tab_ac.classList.remove('catalog__tab-item_active');//удаляю класс активности у таба
-            el.classList.add('catalog__tab-item_active');//и добовляю к новому элементу класс активности
-            cont_ac.classList.remove('catalog__content_active');//удаляю класс активности у окна
-
-        let index = arr.indexOf(el); //ищу в массиве(tabs) индекс искомого элемента(который активный) 
-        catalog[index].classList.add('catalog__content_active'); //добавляю класс активности к окну индекс которого сооветствует индексу активного таба
-    }
+tabs.forEach(function(el){ //перебираю все табы
+    
+        el.addEventListener('click',function(event){//где el-это отдельно взятый элемент группы tabs
+            let target = event.target;//таб на который нажал
+            console.log(target);
+            document.querySelector('.catalog__tab-item_active').classList.remove('catalog__tab-item_active');//ищу активные tab
+            document.querySelector('.catalog__content_active').classList.remove('catalog__content_active');//ищу активные окна
+            el.classList.add('catalog__tab-item_active');
+                                for(let i=0; i<3; i++){
+                                    if( target == tabs[i]){
+                                         tabs[i].classList.add('catalog__tab-item_active');//и добовляю к новому элементу класс активности
+                                        catalog[i].classList.add('catalog__content_active');//и добовляю к новому элементу класс активности
+                                     break;
+                                }
+                               
+                            }
+                        
+                   
+        });
 });
 
  //
@@ -39,41 +47,33 @@ let link_back = document.querySelectorAll('.catalog-item__list .catalog-item__li
     }
 });
 //модальные окна
-let button_large = document.querySelector('.button_large');
-let button = document.querySelector('.header__tel .button');
-let button_submit = document.querySelector('.button_submit');
-let button_card = document.querySelectorAll('.button_card');
-let close = document.querySelectorAll('.modal__close');
+ let button_large = document.querySelector('.button_large');
+ let button = document.querySelector('.header__tel .button');
+ let button_card = document.querySelectorAll('.button_card');
+
 
     button.onclick = function(e){
         document.querySelector('.overlay').style.display = "block";
         document.querySelector('.overlay .modal:nth-child(1)').style.display = "block";
+        document.body.style.overflow = "hidden";
     };
     button_large.onclick = function(e){
         document.querySelector('.overlay').style.display = "block";
         document.querySelector('.overlay .modal:nth-child(1)').style.display = "block";
-    };
-    button_submit.onclick = function(e){
-        document.querySelector('.overlay').style.display = "block";
-        document.querySelector('.overlay .modal:nth-child(1)').style.display = "block";
+        document.body.style.overflow = "hidden";
     };
     //для карточек, когда нажимаю кнопку купить
     [].forEach.call(button_card, function(el){//перебираю все карточки
         el.onclick = function(e){
         document.querySelector('.overlay').style.display = "block";    
         document.querySelector('.overlay .modal:nth-child(2)').style.display = "block";    
+        document.body.style.overflow = "hidden";
         //меняю содержание карточки (а именно наименование товара)
-        //el.parentElement.previousElementSibling.
+        el.parentElement.previousElementSibling;
         }
     });    
-    [].forEach.call(close, function(el){//перебираю все крестики
-    el.onclick = function(e){
-        el.parentElement.style.display = "none";
-        el.parentElement.parentElement.style.display = "none";   
-    }
-});
-}
 
- 
+}
+module.exports = my_script;
  
 

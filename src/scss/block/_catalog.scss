@@ -22,6 +22,7 @@
                 height: 50px;
                 border: 2px solid #d0d0d0;
                 margin: 0 5px;
+               
                 &:hover{
                     cursor: pointer;
                 }
@@ -31,9 +32,8 @@
                     border: none;
                     width: 224px;
                     height: 54px;
-                    div{
-                        color: #ffffff;
-                    }
+                    color: #ffffff;
+                    
                 }
                 div{
                     transform: skewX(30deg);
@@ -42,6 +42,30 @@
                     font-size: 18px;
                     font-weight: 500;
                     text-transform: uppercase;
+                }
+                &:nth-child(1){
+                    &::after{
+                        content: 'Для фитнеса';
+                        position: absolute;
+                        top: 18px;
+                        right: 70px;
+                    }
+                }
+                &:nth-child(2){
+                    &::after{
+                        content: 'Для бега';
+                        position: absolute;
+                        top: 18px;
+                        right: 84px;
+                    }
+                }
+                &:nth-child(3){
+                    &::after{
+                        content: 'Для триатлона';
+                        position: absolute;
+                        top: 18px;
+                        right: 57px;
+                    }
                 }
             }
         }

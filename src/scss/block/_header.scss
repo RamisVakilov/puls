@@ -1,14 +1,11 @@
 
 
     header.header{
-        grid-area: header;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-        justify-items: center;
-        gap: 20px;
-        .header__logo{
-            justify-self: left;
-        }
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            row-gap: 20px;
+            column-gap: 30px;
         .header__representative{
             justify-self: right;
             color: #ffffff;

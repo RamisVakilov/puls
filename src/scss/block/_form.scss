@@ -19,9 +19,9 @@
     }
 }
 .form__form{
-    display: grid;
+    display: flex;
+    flex-direction: column;
     margin-top: 16px;
-    grid-row-gap:20px;
     &_mt25{
         margin-top: 25px;
     }
@@ -37,6 +37,7 @@
          text-align: left;
          padding-left: 20px;
          box-sizing: border-box;
+         margin-bottom: 20px;
          }
      
  }

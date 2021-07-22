@@ -24,7 +24,8 @@
                     <button class="button"><p>заказать звонок</p></button>
                 </div>
             </header>
-            <div class="promo__wrapper">
+            
+                <div class="promo__wrapper">
                 <h1 class="promo__header">Подбор пульсометра<br>
                     <span>с учётом Вашего уровня подготовки</span>
                 </h1>
@@ -47,8 +48,10 @@
                     </div>
                 </div>
                 <button class="button button_large">заказать консультацию</button>
-                <a href="#!" class="promo__link">или <span>ПЕРЕЙТИ В КАТАЛОГ</span></a>
+                <a href="#catalog" class="promo__link">или <span>ПЕРЕЙТИ В КАТАЛОГ</span></a>
             </div>
+            
+            
         </div>
     </section>
     <section class="advantages">
@@ -112,16 +115,16 @@
     </section>
     <section class="catalog">
         <div class="container">
-            <h2 class="catalog__title">Каталог пульсометров</h2>
+            <h2 class="catalog__title" id="catalog">Каталог пульсометров</h2>
             <ul class="catalog__tab">
                 <li class="catalog__tab-item catalog__tab-item_active">
-                    <div>Для фитнеса<div>
+                   
                 </li>
                 <li class="catalog__tab-item">
-                    <div>для бега</div>
+                    
                 </li>
                 <li class="catalog__tab-item">
-                    <div>для триатлона</div>
+                    
                 </li>
             </ul>
             <div class="catalog__content catalog__content_active">
@@ -530,11 +533,11 @@
             <div class="modal__close">&times;</div>
             <div class="modal__title">Просто заполните форму заявки</div>
             <div class="modal__subtitle">и мы перезвоним вам в течении 10 минут</div>
-            <form action="#!" class="form__form form__form_mt25">
+            <form class="form__form form__form_mt25">
                 <input type="text" name="name"  class="form__text" placeholder="Ваше имя">
                 <input type="tel" name="tel" class="form__tel" placeholder=" Ваш телефон">
                 <input type="email" name="email" class="form__email" placeholder="Ваш E-mail">
-                <button class="button button_modal">заказать кОНСУЛЬТАЦИЮ</button>
+                <button class="button button_modal" type="submit">заказать кОНСУЛЬТАЦИЮ</button>
             </form>
         </div>
 
@@ -553,12 +556,14 @@
         <div class="modal">
             <div class="modal__close">&times;</div>
             <div class="modal__title">Спасибо за вашу заявку!</div>
-            <div class="madal__subtitle">Наш менеджер свяжется с вами в ближайшее время!</div>
+            <div class="modal__subtitle">Наш менеджер свяжется с вами в ближайшее время!</div>
         </div>
     </div>
-    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+    <!-- <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
 	<script type="text/javascript" src="js/slick.min.js"></script>
     <script type="text/javascript" src="js/slider.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/script.js"></script> -->
+    <script src='js/index_new.js'></script>
+    <script src ='js/form_ajax.js'></script>
  </body>
 </html>
